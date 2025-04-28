@@ -1,12 +1,12 @@
 const fs = require("fs/promises");
 const path = require("path");
 
-const data_path = path.join(
-  __dirname.slice(0, __dirname.indexOf("controllers")),
-  "data/users.json"
-);
+// const data_path = path.join(
+//   __dirname.slice(0, __dirname.indexOf("controllers")),
+//   "data/users.json"
+// );
 
-// const data_path = path.join(process.cwd(), "data", "users.json");
+const data_path = path.join(process.cwd(), "data", "users.json");
 
 const get_users = async (req, res) => {
   const result = await fs.readFile(data_path, "utf-8");
